@@ -1,7 +1,7 @@
 FROM openresty/openresty:1.15.8.3-2-alpine AS openresty
 
 COPY ./default.conf.template /etc/nginx/conf.d/default.conf.template
-COPY ./stream.conf.template /etc/nginx/stream.conf.template
+#COPY ./stream.conf.template /etc/nginx/stream.conf.template
 COPY ./run.sh /run.sh
 
 RUN /bin/sh -c "apk add --no-cache gettext"
