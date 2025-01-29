@@ -5,5 +5,5 @@ COPY ./default.conf.template /etc/nginx/conf.d/default.conf.template
 COPY ./run.sh /run.sh
 
 RUN /bin/sh -c "apk add --no-cache gettext"
-RUN /bin/sh -c "echo 'include /etc/nginx/stream.conf;' >> /usr/local/openresty/nginx/conf/nginx.conf"
+#RUN /bin/sh -c "echo 'include /etc/nginx/stream.conf;' >> /usr/local/openresty/nginx/conf/nginx.conf"
 CMD ["/bin/sh", "-c", "/run.sh"]
