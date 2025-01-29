@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for i in /etc/nginx/conf.d/default.conf /etc/nginx/stream.conf; do
+for i in /etc/nginx/conf.d/default.conf; do
 	envsubst "`env | awk -F = '{printf \" \\\\$%s\", $1}'`" < $i.template > $i
 done
 
